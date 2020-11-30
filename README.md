@@ -2,8 +2,6 @@
 
 ## General information
 
----
-
 PT_NuGet_DSA.MyCollections is a personal research on both linear and non-linear Data Structures.  
 It includes explicit implementations of a number of DS collections - all analyzed and learnt via the great lectures on DSA in SoftUni and Telerik Academy.
 
@@ -13,11 +11,10 @@ I also shared the implementation of these collection with the community via a Nu
 
 This NuGet already has 328 downloads, which seems crazy to me...
 
----
+## Technologies
+- NUnit
 
 ## Contents
-
----
 
 The solution contains 2 projects:
 
@@ -48,11 +45,7 @@ The solution contains 2 projects:
 
 - DSA.MyCollections.Tests\* - a NUnit test project which includes 121 tests that investigate the consistency, stability and predictability of the collections described above
 
----
-
 ## Credits
-
----
 
 \* All of the tests included in the NUnit project came for granted from the resources of the DS courses of Software University (SoftUni) that I officially participated in.
 
@@ -60,6 +53,4 @@ All knowledge I gained I owe to the great lecturers in SoftUni - Georgi Angelov 
 
 Thank you for invoiking my passion for DSA!
 
----
-
-~THE END~
+\~THE END\~
