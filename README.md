@@ -11,6 +11,9 @@ I also shared the implementation of these collection with the community via a Nu
 
 This NuGet already has 328 downloads, which seems crazy to me...
 
+## Technologies
+- NUnit
+
 ## Contents
 
 The solution contains 2 projects:
