@@ -1,0 +1,1536 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PetarTotev.Net.DSA.MyCollections</name>
+    </assembly>
+    <members>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyDictionary`2">
+            <summary>
+            MyDictionary-TKey, TValue- is a hash table based collection.
+            </summary>
+            <typeparam name="TKey">Any generic type TKey.</typeparam>
+            <typeparam name="TValue">Any generic type TValue.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.#ctor">
+            <summary>
+            MyDictionary is a constructor that creates a new MyDictionary and sets this.hashTable to a new MyHashTable-TKey, TValue-.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.#ctor(System.Collections.Generic.IEnumerable{PetarTotev.Net.DSA.MyCollections.MyKeyValuePair{`0,`1}})">
+            <summary>
+            MyDictionary is a constructor that creates a new MyDictionary and sets this.hashTable to a new MyHashTable of TKey, TValue.
+            Then it writes down all the elements contained in the 'collection' constructor parameter into this.hashTable.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Capacity">
+            <summary>
+            Capacity is a property that returns this.hashTable array capacity.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Item(`0)">
+            <summary>
+            [TKey key] returns a value contained in this TKey.
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A TValue that is a part of the KeyValuePair with a key equal to TKey key.</returns>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Keys">
+            <summary>
+            Keys is a property that returns an IEnumerable collection of all the keys within the collection. 
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Values">
+            <summary>
+            Values is a property that returns an IEnumerable collection of all the values within the collection. 
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Add(`0,`1)">
+            <summary>
+            Add is a void method that inserts a new key-value pair within this.hashTable base collection.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <param name="value">Any generic type TValue.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Clear">
+            <summary>
+            Clear is a void method that resets the hash table that is the base of the MyDictionary.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.ContainsKey(`0)">
+            <summary>
+            ContainsKey is a method that receives a TKey element as a parameter and evaluates if the collection contains such a key.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A boolean that reveals if the element is present as a key in the dictionary or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.ContainsValue(`1)">
+            <summary>
+            ContainsValue is a method that receives a TValue element as a parameter and evaluates 
+            if the collection contains such an element.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type TValue.</param>
+            <returns>A boolean that reveals if the element is present as a value in the dictionary or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.Remove(`0)">
+            <summary>
+            Remove is a method that returns bool if an element TKey key is contained in the collection and is successfully removed from it.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A boolean that evaluates if such TKey key is found in the collection and is removed successfully.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            TryGetValue is a method that returns true if such TKey key is found and sets the TValue value as equal to the TKey key value.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <param name="value">Any generic type TValue.</param>
+            <returns>True if such TKey key is found and the TValue value is set to TKey key's value. False if such key is not found and the TValue value is set to its default.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyDictionary`2.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the hashTable base collection.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyHashSet`1">
+            <summary>
+            MyHashSet of TKey is a hash-table-based collection that holds only TKey. Similar to MyDictionary, but it holds TKey, Tkey instead of TKey, TValue pairs.
+            </summary>
+            <typeparam name="TKey">Any generic type TKey.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.#ctor">
+            <summary>
+            MyHashSet is a constructor that receives no parameters and sets this.hashTable to a new MyHashTable collection of TKey and TKey.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.#ctor(System.Collections.Generic.IEnumerable{PetarTotev.Net.DSA.MyCollections.MyKeyValuePair{`0,`0}})">
+            <summary>
+            MyHashSet is a constructor that receives no parameters and sets this.hashTable to a new MyHashTable collection of TKey and TKey.
+            Then it saves all elements of the 'collection' constructor parameter into this.hashTable collection.
+            </summary>
+            <param name="collection">IEnumerable of MyKeyValuePairs TKey-TKey to be written in the newly created MyHashSet's private this.hashTable base.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.Add(`0)">
+            <summary>
+            Add is a void method that receives a TKey key and saves it into the private this.hashTable base collection.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic TKey.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.Remove(`0)">
+            <summary>
+            Remove is a method that receives a TKey key and removes it from the collection.
+            If such a TKey key is found and removed from the collection returns true, otherwise false.
+            Complexity: O(1).
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.Clear">
+            <summary>
+            Clear is a void method that resets the hash table which is the base of the MyHashSet.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T(Key) element as a parameter.
+            Then it evaluates if the collection contains (a key of) such an element.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A boolean that reveals if the element is present (as a key) in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.Except(PetarTotev.Net.DSA.MyCollections.MyHashSet{`0})">
+            <summary>
+            Except is a method that takes only the unique elements of this collection which are not present in the outer collection.
+            </summary>
+            <param name="outer">The outer collection that should be compared with this.</param>
+            <returns>A new collection that consists of unique elements contained in this collection but not in the outer one.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.IntersectWith(PetarTotev.Net.DSA.MyCollections.MyHashSet{`0})">
+            <summary>
+            IntersectWith is a method that intersects this collection with the outer collection that comes as a method parameter.
+            </summary>
+            <param name="outer">The outer collection that should be intersected with this.</param>
+            <returns>The new collection that is result of the intersection of the two collections.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.SymmetricExcept(PetarTotev.Net.DSA.MyCollections.MyHashSet{`0})">
+            <summary>
+            SymmetricExcept is a method that takes only the unique elements from both collection.
+            </summary>
+            <param name="outer">The outer collection that should be compared with this one.</param>
+            <returns>A new collection that consists of only unique elements that only one of the two collections contains.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.UnionWith(PetarTotev.Net.DSA.MyCollections.MyHashSet{`0})">
+            <summary>
+            UnionWith is a method that unites this collection with the outer collection that comes as a method parameter.
+            </summary>
+            <param name="outer">The outer collection that should be united with this.</param>
+            <returns>The new collection that is result of the unification of the two collections.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashSet`1.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the TKey keys of the hashTable base collection.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyHashTable`2">
+            <summary>
+            MyHashTable of TKey, TValue is the base of MyDictionary and MyHashSet. Based on the .GetHashCode() method, it stores the elements within an array. Each slot of the array is a LinkedList that contains KeyValuePairs.
+            </summary>
+            <typeparam name="TKey">Any generic type TKey.</typeparam>
+            <typeparam name="TValue">Any generic type TValue.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.#ctor(System.Int32)">
+            <summary>
+            MyHashTable is a constructor that creates a new MyHashTable.
+            Then it creates a new array of MyLinkedListD, holding MyKeyValuePairs of TKey, TValue.
+            The new array has either the capacity that comes as a constructor parameter or sets its capacity to a default value of 16.
+            </summary>
+            <param name="capacity"></param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Capacity">
+            <summary>
+            Capacity is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Item(`0)">
+            <summary>
+            [TKey key] returns a value contained in this TKey.
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A TValue that is a part of the KeyValuePair with a key equal to TKey key.</returns>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Keys">
+            <summary>
+            Keys returns an IEnumerable collection of all the TKeys within the collection.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Values">
+            <summary>
+            Values returns an IEnumerable collection of all the TValues within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Add(`0,`1)">
+            <summary>
+            Add is a void method that receives TKey key and TValue value as parameters. It grows the base array if needed.
+            Then it creates a new MyKeyValuePair-TKey,TValue- and adds it to the LinkedList 
+            at an index generated by a HashFunction based on the Tkey key.
+            Complexity: O(1)-amortized.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.AddOrReplace(`0,`1)">
+            <summary>
+            AddOrReplace receives a TKey key and a TValue value parameters. If needed it Grows the array base. 
+            If such a key does not exist a new element is created. 
+            If not - the value of the TKey key would be overriden to be equal to TValue value parameter.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic TKey key.</param>
+            <param name="value">Any generic TValue value.</param>
+            <returns>True if such element already exists, false if is created by the calling of this metod.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Clear">
+            <summary>
+            Clear is a void method that resets the Array of LinkedLists which is the base of the MyHashTable.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.ContainsKey(`0)">
+            <summary>
+            ContainsKey is a method that receives a TKey element as a parameter and evaluates if the collection contains such a key.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A boolean that reveals if the element is present as a key in the hash table or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.ContainsValue(`1)">
+            <summary>
+            ContainsValue is a method that receives a TValue element as a parameter and evaluates if the collection contains such a value.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type TValue.</param>
+            <returns>A boolean that reveals if the element is present as a value in the hash table or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Get(`0)">
+            <summary>
+            Get is a method that receives a parameter of TKey key and returns the TValue value of this key.
+            If such key is not found an exception would be thrown.
+            Complexity: O(1).
+            </summary>
+            <param name="key"></param>
+            <returns>The value of the TKey key that is successfully localized in the collection.</returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">Thrown if this.Find(key) method returns null - such a key is not found.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Find(`0)">
+            <summary>
+            Find is a method that searches through the base array, finds a MyKeyValuePair with TKey key and then returns it.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic TKey.</param>
+            <returns>The MyKeyValuePair of TKey, TValue that is found in the collection and has the TKey key parameter as a key.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.Remove(`0)">
+            <summary>
+            Remove is a method that returns bool if an element TKey key is contained 
+            in the collection and is successfully removed from it.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <returns>A boolean that evaluates if such TKey key is found in the collection and is removed successfully.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.TryGetValue(`0,`1@)">
+            <summary>
+            TryGetValue is a method that returns true if such TKey key is found and sets the TValue value as equal to the TKey key value.
+            Complexity: O(1).
+            </summary>
+            <param name="key">Any generic type TKey.</param>
+            <param name="value">Any generic type TValue.</param>
+            <returns>True if such TKey key is found and the TValue value is set to TKey key's value. False if such key is not found and the TValue value is set to its default.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHashTable`2.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the MyKeyValuePairs of TKey, TValue within the collection.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1">
+            <summary>
+            MyHeapMax of T is a Binary Heap with the following property: parent's value is more than the values of its children.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable of T interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.#ctor">
+            <summary>
+            MyHeapMax is a constructor with no properties that creates a new MyHeapMax and sets this.heap to a new List of T.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.Insert(`0)">
+            <summary>
+            Insert is a void method that inserts a new element (T item) into the max heap collection.
+            Complexity: O(log n).
+            </summary>
+            <param name="item">The generic type element to insert.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.Peek">
+            <summary>
+            Peek is a method that "peeks" into the collection and returns the maximum element without removing it from the heap.
+            Complexity: O(1).
+            </summary>
+            <returns>Returns the T item that has the maximum value of all items within the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown once the Count of the heap is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.Pull">
+            <summary>
+            Pull is a method that returns the maximum element of the collection - removing it from the heap.
+            Complexity: O(log n).
+            </summary>
+            <returns>Returns the T item that has the maximum value of all items within the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown once the Count of the heap is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.HeapifyDown(`0,System.Int32)">
+            <summary>
+            HeapifyDown is a private void method that gets an index and moves the element at that index DOWN as long as its child's value is less than the value of the element.
+            Complexity: O(log n).
+            </summary>
+            <param name="element">A parameter that is not necessary.</param>
+            <param name="index">An integer that is the index of the child to heapify up.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.HeapifyUp(`0,System.Int32)">
+            <summary>
+            HeapifyUp is a private void method that gets an index and moves the element at that index UP as long as its parent's value is greater than the value of the element. 
+            Complexity: O(log n).
+            </summary>
+            <param name="item">A parameter that is not necessary.</param>
+            <param name="indexChild">An integer that is the index of the child to heapify up.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.IsGreater(System.Int32,System.Int32)">
+            <summary>
+            IsGreater is a private method that gets two indices and returns a boolean value that evaluates if the element at the first index is greater than the element at the second index.
+            </summary>
+            <param name="left">An integer that is the index of the first element to evaluate.</param>
+            <param name="right">An integer that is the index of the second element to evaluate.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMax`1.Swap(System.Int32,System.Int32)">
+            <summary>
+            Swap is a private method that swaps two elements with the given indices that are received as method parameters.
+            </summary>
+            <param name="index1">An integer that is the index of the first element to swap.</param>
+            <param name="index2">An integer that is the index of the second element to swap.</param>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1">
+            <summary>
+            MyHeapMin of T is a Binary Heap with the following property: parent's value is less than the values of its children.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable of T interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.#ctor">
+            <summary>
+            MyHeapMin is a constructor with no properties that creates a new MyHeapMin and sets this.heap to a new List of T.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.Insert(`0)">
+            <summary>
+            Insert is a void method that inserts a new element (T item) into the min heap collection.
+            Complexity: O(log n).
+            </summary>
+            <param name="item">The generic type element to insert.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.Peek">
+            <summary>
+            Peek is a method that "peeks" into the collection and returns the minimum element without removing it from the heap.
+            Complexity: O(1).
+            </summary>
+            <returns>Returns the T item that has the minimum value of all items within the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown once the Count of the heap is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.Pull">
+            <summary>
+            Pull is a method that returns the minimum element of the collection - removing it from the heap.
+            Complexity: O(log n).
+            </summary>
+            <returns>Returns the T item that has the minimum value of all items within the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown once the Count of the heap is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.HeapifyDown(`0,System.Int32)">
+            <summary>
+            HeapifyDown is a private void method that gets an index and moves the element at that index DOWN 
+            as long as its child's value is less than the value of the element. 
+            Complexity: O(log n).
+            </summary>
+            <param name="element">A parameter that is not necessary.</param>
+            <param name="index">An integer that is the index of the child to heapify up.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.HeapifyUp(`0,System.Int32)">
+            <summary>
+            HeapifyUp is a private void method that gets an index and moves the element at that index UP 
+            as long as its parent's value is greater than the value of the element. 
+            Complexity: O(log n).
+            </summary>
+            <param name="item">A parameter that is not necessary.</param>
+            <param name="indexChild">An integer that is the index of the child to heapify up.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.IsGreater(System.Int32,System.Int32)">
+            <summary>
+            IsGreater is a private method that gets two indices and returns a boolean value that evaluates if the element at the first index is greater than the element at the second index.
+            </summary>
+            <param name="left">An integer that is the index of the first element to evaluate.</param>
+            <param name="right">An integer that is the index of the second element to evaluate.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyHeapMin`1.Swap(System.Int32,System.Int32)">
+            <summary>
+            Swap is a private method that swaps two elements with the given indices that are received as method parameters.
+            </summary>
+            <param name="index1">An integer that is the index of the first element to swap.</param>
+            <param name="index2">An integer that is the index of the second element to swap.</param>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2">
+            <summary>
+            MyKeyValuePair of TKey, TValue is a pair that consists of a Key and a Value. 
+            The class overrides Equals, GetHashCode and ToString methods.
+            </summary>
+            <typeparam name="TKey">Any generic type TKey.</typeparam>
+            <typeparam name="TValue">Any generic type TValue.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2.#ctor(`0,`1)">
+            <summary>
+            MyKeyValuePair is a constructor that creates a new instance of MyKeyValuePair.
+            It sets the Key property to the Tkey key parameter and the Value property to the TValue value parameter.
+            </summary>
+            <param name="key">Any generic TKey.</param>
+            <param name="value">Any generic TValue</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2.Key">
+            <summary>
+            Key is a property that holds the key of this MyKeyValuePair.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2.Value">
+            <summary>
+            Value is a property that holds the value of this MyKeyValuePair.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2.Equals(System.Object)">
+            <summary>
+            Equals() is a method overriden to return a bool.
+            The bool would evaluate if the obj parameter, cast to MyKeyValuePair has its Key equal to this.Key and its Value equal to this.Value.
+            </summary>
+            <param name="obj">An object to be cast to MyKeyValuePair and to be evaluated to this MyKeyValuePair.</param>
+            <returns>A boolean to show if the (MyKeyValuePair)obj key and value and this MyKeyValuePair key and value are equal.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2.GetHashCode">
+            <summary>
+            GetHashCode is a method that returns an integer which combines the hash codes of this.Key and this.Value in a private method. 
+            </summary>
+            <returns>A new integer that is produced by a private method as an equation of the hash codes of this.Key and this.Value.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyKeyValuePair`2.ToString">
+            <summary>
+            ToString() is a method overriden to return a string representing the Key and Value property in brackets, separated by comma.
+            </summary>
+            <returns>A string representing the Key and Value property in brackets, separated by comma.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1">
+            <summary>
+            MyLinkedListD-T- is a "doubly" linked list collection. The "doubly" nodes that form the chain are of type MyNodeD-T-.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable-T- interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.#ctor(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0},PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            MyLinkedListD is a constructor that creates a new instance of MyLinkedListD.
+            It either receives MyNodeD-T- 'first' and 'last' nodes that are set to the First and Last properties
+            or it sets them to null if no such parameters are received within the constructor.
+            </summary>
+            <param name="first">MyNodeD-T- to be the first node within the collection.</param>
+            <param name="last">MyNodeD-T- to be the last node within the collection.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.First">
+            <summary>
+            First is a property that holds the first node of the Doubly Linked List collection.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Last">
+            <summary>
+            Last is a property that holds the first node of the Doubly Linked List collection.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddAfter(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0},`0)">
+            <summary>
+            AddAfter is a method that receives a MyNodeD 'node' and a T 'newValue'. 
+            It creates a new node with value equal to 'newValue' and adds it after the 'node' received as method parameter.
+            Complexity: 3*O(n) = O(n) ValidateIfNodeExists + O(n) ValidateIfNewNodeDoesNotExist + O(n) Find the node and add after.
+            </summary>
+            <param name="node">The MyNodeD-T- to add a new node after.</param>
+            <param name="newValue">Any generic type T that would be the value of a new node to be inserted after the 'node'.</param>
+            <returns>The new node created wih a value of 'newValue' which was added after the 'node' that came as parameter.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'node' is not found in the collection.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'newNode' already exists in the collection.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddAfter(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0},PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            AddAfter is a void method that receives a MyNodeD 'node' and MyNodeD 'newNode' as parameters.
+            It adds the 'newNode' after the 'node' within the collection.
+            Complexity: 3*O(n) = O(n) ValidateIfNodeExists + O(n) ValidateIfNewNodeDoesNotExist + O(n) Find the node and add after.
+            </summary>
+            <param name="node">The MyNodeD-T- after which a 'newNode' would be added.</param>
+            <param name="newNode">The MyNodeD-T- to add after the 'node'.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'node' is not found in the collection.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'newNode' already exists in the collection.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddBefore(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0},`0)">
+            <summary>
+            AddBefore is a method that receives a MyNodeD 'node' and a T 'newValue'. 
+            It creates a new node with value equal to 'newValue' and adds it before the 'node' received as method parameter.
+            Complexity: 3*O(n) = O(n) ValidateIfNodeExists + O(n) ValidateIfNewNodeDoesNotExist + O(n) Find the node and add before.
+            </summary>
+            <param name="node">The MyNodeD-T- to add a new node before.</param>
+            <param name="newValue">Any generic type T that would be the value of a new node to be inserted before the 'node'.</param>
+            <returns>The new node created wih a value of 'newValue' which was added before the 'node' that came as parameter.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'node' is not found in the collection.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'newNode' already exists in the collection.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddBefore(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0},PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            AddBefore is a void method that receives a MyNodeD 'node' and MyNodeD 'newNode' as parameters.
+            It adds the 'newNode' before the 'node' within the collection.
+            Complexity: 3*O(n) = O(n) ValidateIfNodeExists + O(n) ValidateIfNewNodeDoesNotExist + O(n) Find the node and add after.
+            </summary>
+            <param name="node">The MyNodeD-T- before which a 'newNode' would be added.</param>
+            <param name="newNode">The MyNodeD-T- to add before the 'node'.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'node' is not found in the collection.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the 'newNode' already exists in the collection.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddFirst(`0)">
+            <summary>
+            AddFirst is a method that receives a T value, creates a new node with that value and adds it as this.First within the collection.
+            Complexity: O(1).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>The newly created node with value T 'value' that was added as the collection's First.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddFirst(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            AddFirst is a method that receives a node 'newNode' and adds it as this.First within the collection.
+            Complexity: O(1).
+            </summary>
+            <param name="newNode">MyNodeD-T- 'newNode' to be added as First.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddLast(`0)">
+            <summary>
+            AddLast is a method that receives a T value, creates a new node with that value and adds it as this.Last.
+            Complexity: O(1).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>The newly created node with value T 'value' that was added as the collection's Last.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.AddLast(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            AddLast is a method that receives a node 'newNode' and adds it as this.Last within the collection.
+            Complexity: O(1).
+            </summary>
+            <param name="newNode">MyNodeD-T- 'newNode' to be added as Last.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Clear">
+            <summary>
+            Clear is a void method that resets the MyLinkedListD by setting the First, the Last and their Next/Previous to null. 
+            It also sets the Count to 0.
+            Complexity: O(1).
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T value as a parameter and evaluates if the collection contains such a value.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>A boolean that reveals if the value is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Find(`0)">
+            <summary>
+            Find is a method that receives a T 'value' and returns the first MyNodeD-T- with such value found within the collection 
+            or it returns null if no such element exists.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>MyNodeD-T- if a node with such value is found. If not - returns null.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.FindLast(`0)">
+            <summary>
+            Find is a method that receives a T 'value' and returns the last MyNodeD-T- with such value found within the collection 
+            or it returns null if no such element exists.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>MyNodeD-T- if a node with such value is found. If not - returns null.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Remove(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            Remove is a void method that receives a MyNodeD-T- 'node' and if such node is found - removes it from the collection.
+            If no such element exists within the Linked List - exception is thrown.
+            Complexity: O(n).
+            </summary>
+            <param name="node">MyNodeD-T- node to be removed from the collection.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if no such node exists within the collection.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.Remove(`0)">
+            <summary>
+            Remove is a method that receives a T value and if a node with such value is found - it is removed from the collection.
+            If so - returns true. If no such element exists - returns false.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>A boolean that evaluates if a node with such value is found and removed from the collection.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.RemoveFirst">
+            <summary>
+            RemoveFirst is a void method that removes the First element within the Linked List collection.
+            Complexity: O(1).
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of collection is equals to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.RemoveLast">
+            <summary>
+            RemoveLast is a void method that removes the Last element within the Linked List collection.
+            Complexity: O(1).
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of collection is equals to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListD`1.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(х).
+            </summary>
+            <returns>Yield returns the values of all nodes within the Linked List.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1">
+            <summary>
+            MyLinkedListS-T- is a "singly" linked list collection. The "singly" nodes that form the chain are of type MyNodeS-T-.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable-T- interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.#ctor(PetarTotev.Net.DSA.MyCollections.MyNodeS{`0},PetarTotev.Net.DSA.MyCollections.MyNodeS{`0})">
+            <summary>
+            MyLinkedListS is a constructor that creates a new instance of MyLinkedListS.
+            It receives 2 MyNodeS-T- parameters - 'head' and 'tail'. They are set to null if not received as constructor parameters.
+            </summary>
+            <param name="head">MyNodeS-T- that is set as the head of the Linked List.</param>
+            <param name="tail">MyNodeS-T- that is set as the tail of the Linked List.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.AddFirst(`0)">
+            <summary>
+            AddFirst is a void method that receives a T value and sets a new MyNodeS-T- with this value as the HEAD of the Linked List.
+            Complexity: O(1).
+            </summary>
+            <param name="value">Any generic type T.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.AddLast(`0)">
+            <summary>
+            AddLast is a void method that receives a T value and sets a new MyNodeS-T- with this value as the TAIL of the Linked List.
+            Complexity: O(1).
+            </summary>
+            <param name="value">Any generic type T.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.Clear">
+            <summary>
+            Clear is a void method that resets the MyLinkedListS by setting the head, the tail and their Nexts to null. 
+            It also sets the Count to 0.
+            Complexity: O(1).
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T value as a parameter and evaluates if the collection contains such a value.
+            Complexity: O(n).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>A boolean that reveals if the value is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.GetFirst">
+            <summary>
+            GetFirst is a method that receives no parameters and returns the value of the HEAD element of the Linked List.
+            Complexity: O(1).
+            </summary>
+            <returns>The T value of the head of the Linked List collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.GetLast">
+            <summary>
+            GetLast is a method that receives no parameters and returns the value of the TAIL element of the Linked List.
+            Complexity: O(1).
+            </summary>
+            <returns>The T value of the head of the Linked List collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.RemoveFirst">
+            <summary>
+            RemoveFirst is a method that returns no parameters. 
+            It removes the head of the Linked List and sets the head.Next as the new head.
+            Complexity: O(1).
+            </summary>
+            <returns>The value of the removed ex-head of the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.RemoveLast">
+            <summary>
+            RemoveFirst is a method that returns no parameters. 
+            It removes the tail of the Linked List and sets the second-to-last node as the new tail.
+            Complexity: O(n). 
+            </summary>
+            <returns>The value of the removed ex-tail of the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the Linked List is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyLinkedListS`1.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the values of all nodes within the Linked List.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyList`1">
+            <summary>
+            MyList-T- is an implemented System.Collections.Generic List-T-. It is also known as ArrayList, Dynamic Array or ADS List.
+            </summary>
+            <typeparam name="T">Any generic type T.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.#ctor(System.Int32)">
+            <summary>
+            MyList is a constructor that creates a new instance of MyList.
+            It creates a new inner array that has length equal to the capacity received as a constructor parameter.
+            If no such parameter is received, the length of the array is set to a default capacity of 4.
+            </summary>
+            <param name="initialCapacity">Int32 that would be the initial capacity, or length of the inner array.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.Finalize">
+            <summary>
+            ~MyList is a destructor that has no special function but to remind you that Destructors do exist.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyList`1.Item(System.Int32)">
+            <summary>
+            [index] would return the value that is hold in the array at the certain index [index].
+            Complexity: O(1).
+            </summary>
+            <param name="index">Int32 that is the index of the array to access or set.</param>
+            <returns>The T value that is kept at the certain index of the array.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if the index is less than 0 or greater than / equal to the length of the inner array.</exception>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyList`1.Capacity">
+            <summary>
+            Capacity is a property that returns the current length of the array that is the base of the MyList-T-.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyList`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements added within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.Add(`0)">
+            <summary>
+            Add is a void method that adds a new T item within the inner array of the MyList collection.
+            Complexity: O(1)-amortized!
+            </summary>
+            <param name="item">Any generic type T.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.Clear">
+            <summary>
+            Clear is a void method that resets the array which is the base of the MyList-T- to a new collection with default capacity.
+            Complexity: O(1).
+            It also sets the Count to 0.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T item as a parameter and evaluates if the collection contains such an item.
+            Complexity: O(n).
+            </summary>
+            <param name="item">Any generic type T.</param>
+            <returns>A boolean that reveals if the element is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.IndexOf(`0)">
+            <summary>
+            IndexOf is a method that receives a T item and returns -1 if such item is not found or the index of the first such element looping forward.
+            Complexity: O(n).
+            </summary>
+            <param name="item">Any generic type T.</param>
+            <returns>The index of the first element equal to the T item looping forward.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.Insert(System.Int32,`0)">
+            <summary>
+            Insert is a void method that receives an index and an item and inserts the item at the certain index.
+            Complexity: O(n)-amortized.
+            </summary>
+            <param name="index">Int32 that is the index to insert the item to.</param>
+            <param name="item">Any generic type T.</param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if the index is less than 0 or greater than / equal to the length of the inner array.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.LastIndexOf(`0)">
+            <summary>
+            LastIndexOf is a method that receives a T item and returns -1 if such item is not found or the index of the first such element looping backwards.
+            Complexity: O(n).
+            </summary>
+            <param name="item">Any generic type T.</param>
+            <returns>The last index of the first element equal to the T item looping backwards.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.Remove(`0)">
+            <summary>
+            Remove is a method that receives an item and removes it, returning true or returns false if such value is not found in the collection.
+            Complexity: 2*O(n) = O(n) IndexOf(item) + O(n) RemoveAt(index).
+            </summary>
+            <param name="item">Any generic type T.</param>
+            <returns>A boolean that evaluates if such item is found within the MyList collection.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if the index is less than 0 or greater than / equal to the length of the inner array.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.RemoveAt(System.Int32)">
+            <summary>
+            RemoveAt is a void method that receives an Int32 index and removes the value.
+            Complexity: O(n).
+            </summary>
+            <param name="index"></param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if the index is less than 0 or greater than / equal to the length of the inner array.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyList`1.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the values within the inner array of the MyList.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyNodeBST`1">
+            <summary>
+            MyNodeBST of T is a Node class that is used with MyTreeBinarySearch of T and MyTreeBinarySearch2 of T. 
+            A node has a value, a left node and a right node.
+            </summary>
+            <typeparam name="T">Any generic type T.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyNodeBST`1.#ctor(`0,PetarTotev.Net.DSA.MyCollections.MyNodeBST{`0},PetarTotev.Net.DSA.MyCollections.MyNodeBST{`0})">
+            <summary>
+            MyNodeBST is a constructor that creates a new instance of MyNodeBST-T-.
+            It receives a T 'value'and 2 nodes of type MyNodeBST-T- 'left' and 'right' that are set to null if no such parameter is received. 
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <param name="left">MyNodeBST-T- node that is set to null by default if no such method parameter is received.</param>
+            <param name="right">MyNodeBST-T- node that is set to null by default if no such method parameter is received.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeBST`1.Left">
+            <summary>
+            Left is a property that keeps a reference to a node of type MyNodeBST-T- that would be the left child of this node.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeBST`1.Right">
+            <summary>
+            Right is a property that keeps a reference to a node of type MyNodeBST-T- that would be the right child of this node.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeBST`1.Value">
+            <summary>
+            Value is a property that holds the value of this node.
+            </summary>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyNodeD`1">
+            <summary>
+            MyNodeD of T is a "doubly" Node class that suits the needs of MyLinkedListD of T - a "doubly" linked list collection. 
+            Each node has a value, a next node and a previous node.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable of T interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyNodeD`1.#ctor(`0,PetarTotev.Net.DSA.MyCollections.MyNodeD{`0},PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            MyNodeD is a constructor that takes 3 parameters - T value, MyNodeD of T next and MyNodeD of T previous.
+            The 'next' and 'previous' nodes are set to null by default if not received as method parameters.
+            The constructor sets Next property = 'next', Previous property = 'previous' and 'Value' property = 'value'.
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <param name="next">MyNodeD of T that is set to null if not received as a method parameter.</param>
+            <param name="previous">MyNodeD of T that is set to null if not received as a method parameter.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeD`1.Next">
+            <summary>
+            Next is a property that holds the 'address' to another MyNodeD of T that chains the doubly Linked List ahead.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeD`1.Previous">
+            <summary>
+            Previous is a property that holds the 'address' to another MyNodeD of T  that chains the doubly Linked List behind.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeD`1.Value">
+            <summary>
+            Value is a property of type T that holds the value of the node itself.
+            </summary>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyNodeS`1">
+            <summary>
+            MyNodeS of T is a "singly" Node class that suits the needs of MyLinkedListS of T - a "singly" linked list collection. Each node has a value and a next node.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable of T interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyNodeS`1.#ctor(`0,PetarTotev.Net.DSA.MyCollections.MyNodeS{`0})">
+            <summary>
+            MyNodeS is a constructor that receives 2 parameters - T 'value' and MyNodeS of T 'next' 
+            'next' is set to null if not received as a parameter.
+            The constructor sets the Next property equal to 'next' and the Value property equal to 'value'.
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <param name="next">MyNodeS of T that is set to null if not received as a method parameter.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeS`1.Next">
+            <summary>
+            Next is a property of type MyNodeS of T that keeps the 'address' of another node of the same type as a reference that makes the link.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyNodeS`1.Value">
+            <summary>
+            Value is a property of type T that holds the value of the node itself.
+            </summary>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1">
+            <summary>
+            MyPriorityQueue of T is a Max (Binary) Heap that has a HeapifyDown() method.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable of T interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.#ctor">
+            <summary>
+            MyPriorityQueue is a constructor that creates a new instance of MyPriorityQueue.
+            It sets the inner collection this.priorityQueue to a new List of T;
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.Add(`0)">
+            <summary>
+            Add is a void method that receives a T element and inserts it at th eend into the inner collection (max heap).
+            Then it heapifies it by swapping with its parent as long as the parent is greater than the element.
+            Complexity: O(log n).
+            </summary>
+            <param name="element">Any generic type T.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.Dequeue">
+            <summary>
+            Dequeue is a method that receives no parameters and returns a T value.
+            The value returned is the maximum one (the root) within the max heap (at index 0).
+            It is dequeued from the collection.
+            Complexity: O(log n).
+            </summary>
+            <returns>The maximum value within the priority queue (max heap).</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.Peek">
+            <summary>
+            Peek is a method that receives no parameters and returns a T value.
+            The value returned is the maximum one (the root) within the max heap (at index 0).
+            Peek does not remove it from the collection.
+            Complexity: O(1).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.HeapifyDown(`0,System.Int32)">
+            <summary>
+            HeapifyDown is a private void method that gets an index and moves the element at that index DOWN 
+            as long as its child's value is less than the value of the element. 
+            Complexity: O(log n).
+            </summary>
+            <param name="element">A parameter that is not necessary.</param>
+            <param name="index">An integer that is the index of the child to heapify up.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyPriorityQueue`1.HeapifyUp(`0,System.Int32)">
+            <summary>
+            HeapifyUp is a private void method that gets an index and moves the element at that index UP 
+            as long as its parent's value is greater than the value of the element. 
+            Complexity: O(log n).
+            </summary>
+            <param name="item">A parameter that is not necessary.</param>
+            <param name="indexChild">An integer that is the index of the child to heapify up.</param>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyQueue`1">
+            <summary>
+            MyQueue-T- is a collection based on the principle First-In-First-Out (FIFO). 
+            A queue in which the element that was queued first would get dequeued first.
+            </summary>
+            <typeparam name="T">Any generic type T.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyQueue`1.#ctor">
+            <summary>
+            MyQueue is a constructor that creates a new instance of MyQueue. It receives no parameters.
+            It sets the first and the last element of inner LinkedList collection to null and its Count property to 0.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyQueue`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyQueue`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T item as a parameter and evaluates if the collection contains such an item.
+            Complexity: O(n).
+            </summary>
+            <param name="item">Any generic type T.</param>
+            <returns>A boolean that reveals if the item is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyQueue`1.Enqueue(`0)">
+            <summary>
+            Enqueue is a void method that receives a value of T and creates a new MyNodeD of T with this value.
+            Then it adds it as the inner collection's last.
+            Complexity: O(1).
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyQueue`1.Dequeue">
+            <summary>
+            Dequeue is a method that receives no parameters. 
+            It returns the value T of the first element within the inner Linked List collection.
+            The method also removes the element from the collection.
+            Complexity: O(1).
+            </summary>
+            <returns>The value of the element that is the first within the inner Linked List collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the queue is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyQueue`1.Peek">
+            <summary>
+            Peek is a method that receives no parameters. 
+            It returns the value T of the first element within the inner Linked List collection.
+            The method does not remove the element from the collection.
+            Complexity: O(1).
+            </summary>
+            <returns>The value of the element that is the first within the inner Linked List collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the queue is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyQueue`1.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the values of all MyNodeD elements within the base doubly LinkedList.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyStack`1">
+            <summary>
+            MyStack-T- is a collection based on the principle Last-In-First-Out (LIFO). 
+            A stack in which the element that was pushed first would be pulled last.
+            </summary>
+            <typeparam name="T">Any generic type T.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.#ctor">
+            <summary>
+            MyStack is a constructor that creates a new instance of MyStack. It receives no parameters.
+            It sets the tail of the base LinkedList collection to null and its Count property to 0.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyStack`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T item as a parameter and evaluates if the collection contains such an item.
+            Complexity: O(n).
+            </summary>
+            <param name="item">Any generic type T.</param>
+            <returns>A boolean that reveals if the item is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.Contains(PetarTotev.Net.DSA.MyCollections.MyNodeD{`0})">
+            <summary>
+            Contains is a method that receives a MyNodeD-T- item as a parameter and evaluates if the collection contains such a node.
+            Complexity: O(n).
+            </summary>
+            <param name="item">A MyNodeD-T- "doubly" node item.</param>
+            <returns>A boolean that reveals if the item is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.Peek">
+            <summary>
+            Peek is a method that takes the tail element of the singly LinkedList.
+            It returns its value without taking the element out of the collection.
+            Complexity: O(1).
+            </summary>
+            <returns>The value of the element that is the tail (last) of the base collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the stack is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.Pop">
+            <summary>
+            Pop is a method that takes the tail element of the singly LinkedList.
+            It takes it out of the collection and returns its value.
+            Complexity: O(1).
+            </summary>
+            <returns>The value of the element that is "popped" out of the base collection.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Count of the stack is equal to 0.</exception>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.Push(`0)">
+            <summary>
+            Push is a void method to insert a new item of T within the singly LinkedList as a tail (last).
+            Complexity: O(1).
+            </summary>
+            <param name="item">The value of the MyNodeS to be created and set as the new tail of the singly LinkedList.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyStack`1.GetEnumerator">
+            <summary>
+            GetEnumerator is an imperative method for all classes implementing the IEnumerable interface.
+            Complexity: O(n).
+            </summary>
+            <returns>Yield returns the values of all MyNodeS elements within the base singly LinkedList.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyTree`1">
+            <summary>
+            MyTree-T- is a tree based structure - a MyTree-T- element would have a List-MyTree-T-- collection of children.
+            </summary>
+            <typeparam name="T">Any generic type T.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTree`1.#ctor(`0,PetarTotev.Net.DSA.MyCollections.MyTree{`0}[])">
+            <summary>
+            MyTree is a constructor that creates a new instance of MyTree.
+            It receives 2 parameters - a generic T value and 0, 1 or more children of type MyTree.
+            It sets the Value property equal to value and the Children property to a new List of MyTree with 'children' as the List elements.
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <param name="children">A number of MyTree elements to be used for the Children property by saving them into a new List.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTree`1.Value">
+            <summary>
+            Value is a property that returns the value of this MyTree.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTree`1.Children">
+            <summary>
+            Children is a property that returns an IList collection of MyTrees that are the children of this MyTree.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTree`1.GetBFS">
+            <summary>
+            GetBFS is a private method that traverses through the MyTree and gets the Breadth-First-Search order of all its elements.
+            </summary>
+            <returns>An IEnumerable collection with all the T values of the elements of the MyTree, ordered by BFS.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTree`1.GetDFS">
+            <summary>
+            GetDFS is a private method that traverses through the MyTree and gets the Depth-First-Search order of all its elements.
+            </summary>
+            <returns>An IEnumerable collection with all the T values of the elements of the MyTree, ordered by DFS.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTree`1.Each(System.Action{`0})">
+            <summary>
+            Each is a method that traverses recursively through the structure of the MyTree.
+            It executes an action for each next MyTree subtree.
+            </summary>
+            <param name="action">The action void delegate to execute for each node during traversal.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTree`1.Print(System.Int32)">
+            <summary>
+            Print is a recursive void method that uses Console.WriteLine() to print the structure of the MyTree on multiple console lines.
+            The Print method receives an indent integer as a parameter or takes 0 as a default value for it.
+            It is incremented and multiplied by 2 with each further nest.
+            </summary>
+            <param name="indent">An integer that is the "step" to move each child further to the right. By default it is set to 0.</param>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1">
+            <summary>
+            MyTreeBinary-T- is a tree based structure.
+            Each element would have T value, left child and right child of type MyTreeBinary-T-.
+            </summary>
+            <typeparam name="T">Any generic type T.</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.#ctor(`0,PetarTotev.Net.DSA.MyCollections.MyTreeBinary{`0},PetarTotev.Net.DSA.MyCollections.MyTreeBinary{`0})">
+            <summary>
+            MyTreeBinary is a constructor that creates a new instance of MyTreeBinary.
+            It receives T value, MyTreeBinary left and MyTreeBinary right and sets them to the properties Left, Right and Value.
+            If left and right values are not passed as parameters to the constructor they are automatically set to null.
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <param name="left">MyTreeBinary of T to be declared as the Left Child of this MyTreeBinary of T.</param>
+            <param name="right">MyTreeBinary of T to be declared as the Right Child of this MyTreeBinary of T.</param>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.Left">
+            <summary>
+            Left is a property that returns MyTreeBinary of T - the Left Child of this MyTreeBinary of T.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.Right">
+            <summary>
+            Right is a property that returns MyTreeBinary of T - the Right Child of this MyTreeBinary of T.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.Value">
+            <summary>
+            Value is a property that returns the value of this MyTreeBinary.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.ListPreOrder">
+            <summary>
+            ListPreOrder method goes through the nodes of the tree always printing the parent first, before the left and right child.
+            It traverses in the following order: parent -> left child -> right child.
+            </summary>
+            <returns>An IEnumerable collection of all the values of the nodes, based on the PreOrder traversal.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.ListInOrder">
+            <summary>
+            ListInOrder method goes through the nodes of the tree always printing the parent in the middle of the left and right child.
+            It traverses in the following order: left child -> parent -> right child.
+            </summary>
+            <returns>An IEnumerable collection of all the values of the nodes, based on the InOrder traversal.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.ListPostOrder">
+            <summary>
+            ListPostOrder method goes through the nodes of the tree always printing the parent last, after the left and right child.
+            It traverses in the following order: left child -> right child -> parent.
+            </summary>
+            <returns>An IEnumerable collection of all the values of the nodes, based on the PostOrder traversal.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinary`1.Print(PetarTotev.Net.DSA.MyCollections.MyTreeBinary{`0},System.Int32)">
+            <summary>
+            Print is a recursive void method that uses Console.WriteLine() to print the structure of the MyTree on multiple console lines.
+            The Print method receives an indent integer as a parameter or takes 0 as a default value for it.
+            It is incremented and multiplied by 2 with each further nest.
+            </summary>
+            <param name="tree">A MyTreeBinary of T to be the starting point of printing.</param>
+            <param name="indent">An integer that is the "step" to move each child further to the right. By default it is set to 0.</param>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1">
+            <summary>
+            MyTreeBinarySearch-T- is a tree based structure. 
+            Each element would have T value, left child and right child of type MyTreeBinarySearch-T-. 
+            The value of each parent is greater than the value of the left child, but is smaller than the value of the right one.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable-T- interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.#ctor">
+            <summary>
+            MyTreeBinarySearch constructor creates a new MyTreeBinarySearch and sets this.root to null.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T value as a parameter and evaluates if the collection contains such a value.
+            Complexity: O(log n) / O(n).
+            </summary>
+            <param name="value">Any generic type T.</param>
+            <returns>A boolean that reveals if the value is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.DeleteMin">
+            <summary>
+            DeleteMin is a void method that deletes the element in the binary search tree with the minimum value.
+            Complexity: O(log n) / O(n).
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.EachInOrder(System.Action{`0})">
+            <summary>
+            EachInOrder is a void method that goes through all the nodes of the collection, following the InOrder traversal order.
+            Once a node is being traversed a void action is being executed using the value of the node.
+            </summary>
+            <param name="action">An action to be executed with each value of all nodes of the Binary Search Tree.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.Insert(`0)">
+            <summary>
+            Insert is a void method that inserts a new Node with T value that comes as a parameter in the method.
+            Complexity: O(log n) / O(n).
+            </summary>
+            <param name="value">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.Range(`0,`0)">
+            <summary>
+            Range is a method that returns a new List which consists of all values within the binary search tree that are between the T arg1 and T arg2 values - which come as method parameters.
+            </summary>
+            <param name="arg1">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+            <param name="arg2">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+            <returns>A new List of T which holds all values within the tree between the T arg1 and T arg2 value.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch`1.Search(`0)">
+            <summary>
+            Search is a method that searches through the Binary Search Tree for a T item that comes as a parameter. 
+            Once found - it creates a new MyTreeBinarySearch subtree with the node that has T item value as root and then returns it.
+            Complexity: O(log n) / O(n).
+            </summary>
+            <param name="item">The value that has to be searched through the tree.</param>
+            <returns>A new MyTreeBinarySearch subtree that has the node with T item as a root.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1">
+            <summary>
+            MyTreeBinarySearch2-T- is a tree based structure. 
+            Each element would have T value, left child and right child of type MyTreeBinarySearch2-T-. 
+            The value of each parent is greater than the value of the left child, but is smaller than the value of the right one.
+            MyTreeBinarySearch2-T- is quite the same as MyTreeBinarySearch-T-, but expanded and improved with additional functionality.
+            </summary>
+            <typeparam name="T">Any generic type T that is comparable (it implements the IComparable-T- interface).</typeparam>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.#ctor">
+            <summary>
+            MyTreeBinarySearch2 is a constructor that creates a new MyTreeBinarySearch2 and sets the Root property to null.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.#ctor(PetarTotev.Net.DSA.MyCollections.MyNodeBST{`0})">
+            <summary>
+            MyTreeBinarySearch2 is a constructor that creates a new MyTreeBinarySearch2.
+            Then it copies the root that comes as a method parameter and all of its children to this new MyTreeBinarySearch2 tree.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Root">
+            <summary>
+            Root is a property that returns the root of this.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.LeftChild">
+            <summary>
+            LeftChild is a property that returs the left child of this.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.RightChild">
+            <summary>
+            RightChild is a property that returns the right child of this.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Value">
+            <summary>
+            Value is a property that returns the value of this root.
+            </summary>
+        </member>
+        <member name="P:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Count">
+            <summary>
+            Count is a property that returns the current count of all elements within the collection.
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Contains(`0)">
+            <summary>
+            Contains is a method that receives a T element as a parameter and evaluates if the collection contains such an element.
+            Complexity: O(log n) / O(n).
+            </summary>
+            <param name="element">Any generic type T.</param>
+            <returns>A boolean that reveals if the element is present in the collection or not.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.DeleteMax">
+            <summary>
+            DeleteMax is a void method that deletes the element in the binary search tree with the maximum value.
+            Complexity: O(log n) / O(n).
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.DeleteMin">
+            <summary>
+            DeleteMin is a void method that deletes the element in the binary search tree with the minimum value.
+            Complexity: O(log n) / O(n).
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.EachInOrder(System.Action{`0})">
+            <summary>
+            EachInOrder is a void method that goes through all the nodes of the collection, following the InOrder traversal order.
+            Once a node is being traversed a void action is being executed using the value of the node.
+            </summary>
+            <param name="action">An action to be executed with each value of all nodes of the Binary Search Tree.</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.GetRank(`0)">
+            <summary>
+            GetRank is a method that goes through the Binary Search Tree.
+            It calculates the count of all elements with values less than the value of the element that comes as a method parameter.
+            </summary>
+            <param name="value">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+            <returns>An integer equal to the count of all elements with values less than the value of the T element method parameter.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Insert(`0)">
+            <summary>
+            Insert is a void method that inserts a new Node with T value that comes as a parameter in the method.
+            Complexity: O(log n) / O(n).
+            </summary>
+            <param name="value">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Range(`0,`0)">
+            <summary>
+            Range is a method that returns a new List which consists of all values within the binary search tree that are between the T lower and T upper values - which come as method parameters.
+            </summary>
+            <param name="lower">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+            <param name="upper">Any generic type T that is comparable (it implements the IComparable-T- interface).</param>
+            <returns>Returns a new List of T which holds all values within the tree between the T lower and T upper value.</returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeBinarySearch2`1.Search(`0)">
+            <summary>
+            Search is a method that searches through the Binary Search Tree for a T item that comes as a parameter. 
+            Once found - it creates a new MyTreeBinarySearch subtree with the node that has T element value as root and then returns it.
+            Complexity: O(log n) / O(n).
+            </summary>
+            <param name="element">The value that has to be searched through the tree.</param>
+            <returns>A new MyTreeBinarySearch subtree that has the node with T element as a root.</returns>
+        </member>
+        <member name="T:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Insert(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Contains(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.EachInOrder(System.Action{`0})">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Search(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.DeleteMin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Range(`0,`0)">
+            <summary>
+            
+            </summary>
+            <param name="startRange"></param>
+            <param name="endRange"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Delete(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.DeleteMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Count">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Rank(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Select(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="rank"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Ceiling(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PetarTotev.Net.DSA.MyCollections.MyTreeRedBlack`1.Floor(`0)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

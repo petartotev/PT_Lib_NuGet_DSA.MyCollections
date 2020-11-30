@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>petartotev.net</Authors>
+    <Product>MyCollections</Product>
+    <Description>This package is an attempt to combine and organize all DS knowledge I managed to get from my training in SoftUni and Telerik Academy. All DSs (linear and tree-based) are implemented manually, thanks to the great guidance that came from the lectures of Kiril Stanoev, Kiril Kirilov, Georgi Angelov etc.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>MyCollections.jpg</PackageIcon>
+    <PackageTags>Petar, Totev, PetarTotev, PetarTotev.Net, PT, petartotev.net, MyHashTable, MyHeapMax, MyHeapMin, MyTreeBinarySearch, MyTreeBinarySearch2, MyPriorityQueue, MyLinkedList, MyLinkedListS, MyLinkedListD, MyLinkedListSingly, MyLinkedListDoubly, MyTree, MyTreeBinary</PackageTags>
+    <PackageReleaseNotes>Next versions would include AVL tree, Red-Black-Tree, Rope, Trie and other implementations.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\USER\source\repos\SoftUni\DS1_Fund_OFFICIAL_2020-09\DSFundAll\DSFundAll\PetarTotev.Net.DSA.MyCollections\PetarTotev.Net.DSA.MyCollections.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="D:\D\DOCUMENTS\My Software\00_NuGetPT\PetarTotev.Net.DSA.MyCollections\MyCollections.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
