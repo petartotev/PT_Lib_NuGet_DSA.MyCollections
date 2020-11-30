@@ -7,7 +7,7 @@ It includes explicit implementations of a number of DS collections - all analyze
 
 I also shared the implementation of these collection with the community via a NuGet package:
 
-![nuget_package](\Resources\Screenshots\NuGet_PetarTotev.Net.DSA.MyCollections.jpg)
+![nuget_package](/Resources/Screenshots/NuGet_PetarTotev.Net.DSA.MyCollections.jpg)
 
 This NuGet already has 328 downloads, which seems crazy to me...
 
