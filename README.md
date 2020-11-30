@@ -50,4 +50,4 @@ All knowledge I gained I owe to the great lecturers in SoftUni - Georgi Angelov 
 
 Thank you for invoiking my passion for DSA!
 
-~THE END~
+\~THE END\~
