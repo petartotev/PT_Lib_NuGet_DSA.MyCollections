@@ -1,8 +1,8 @@
-# PT_NuGet_DSA.MyCollections
+# PT_Library_NuGet_DSA.MyCollections
 
 ## General Information
 
-PT_NuGet_DSA.MyCollections is a personal research on both linear and non-linear Data Structures.  
+PT_Library_NuGet_DSA.MyCollections is a personal research on both linear and non-linear Data Structures.  
 It includes explicit implementations of a number of DS collections - all analyzed and learnt via the great lectures on DSA in SoftUni and Telerik Academy.
 
 I also shared the implementation of these collection with the community via a NuGet package:
